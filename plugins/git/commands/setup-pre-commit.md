@@ -1,0 +1,1 @@
+../../../.workspace/commands/setup-pre-commit/SKILL.md

@@ -1,0 +1,1 @@
+../../../.workspace/commands/verify/SKILL.md

@@ -1,0 +1,1 @@
+../../../.workspace/commands/fix-test/SKILL.md

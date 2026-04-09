@@ -1,0 +1,13 @@
+{
+  "name": "nextjs",
+  "version": "1.0.0",
+  "description": "Next.js App Router architecture, patterns, and best practices",
+  "author": {
+    "name": "CThanh Nguyen"
+  },
+  "repository": "https://github.com/thanhnc1308/agentic-engineer-toolkit",
+  "license": "MIT",
+  "keywords": ["nextjs", "react", "frontend", "app-router"],
+  "skills": "./skills/",
+  "agents": "./agents/"
+}

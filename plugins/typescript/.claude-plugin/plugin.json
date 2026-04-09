@@ -1,0 +1,12 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "TypeScript conventions, type safety, and refactoring patterns",
+  "author": {
+    "name": "CThanh Nguyen"
+  },
+  "repository": "https://github.com/thanhnc1308/agentic-engineer-toolkit",
+  "license": "MIT",
+  "keywords": ["typescript", "type-safety", "refactoring"],
+  "skills": "./skills/"
+}

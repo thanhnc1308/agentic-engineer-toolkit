@@ -1,0 +1,66 @@
+{
+  "name": "agentic-engineer-toolkit",
+  "description": "Personal agentic engineering plugin marketplace for full-stack software development",
+  "owner": {
+    "name": "CThanh Nguyen"
+  },
+  "metadata": {
+    "version": "1.0.1"
+  },
+  "plugins": [
+    {
+      "name": "eng-toolkit",
+      "source": "./plugins/eng-toolkit",
+      "description": "Full-stack development workflow with 16 specialized agents: planning, TDD, code review, security audit, performance check, refactoring, orchestration, and verification",
+      "category": "workflow",
+      "tags": [
+        "workflow",
+        "planning",
+        "review",
+        "tdd",
+        "security",
+        "performance",
+        "refactoring",
+        "orchestration",
+        "agents",
+        "code-review",
+        "verification"
+      ]
+    },
+    {
+      "name": "typescript",
+      "source": "./plugins/typescript",
+      "description": "TypeScript conventions, type safety, and refactoring patterns",
+      "category": "language",
+      "tags": ["typescript", "type-safety", "refactoring"]
+    },
+    {
+      "name": "nestjs",
+      "source": "./plugins/nestjs",
+      "description": "NestJS architecture, DI patterns, and module organization",
+      "category": "framework",
+      "tags": ["nestjs", "backend", "nodejs"]
+    },
+    {
+      "name": "nextjs",
+      "source": "./plugins/nextjs",
+      "description": "Next.js best practices, file structure, and API routes",
+      "category": "framework",
+      "tags": ["nextjs", "frontend", "react"]
+    },
+    {
+      "name": "agentic-helpers",
+      "source": "./plugins/agentic-helpers",
+      "description": "Platform-specific tools, agents, and commands for cross-platform development",
+      "category": "tools",
+      "tags": ["platform", "cross-platform", "agents"]
+    },
+    {
+      "name": "git",
+      "source": "./plugins/git",
+      "description": "Git workflow commands (commit, PR) with shared Conventional Commits conventions",
+      "category": "tools",
+      "tags": ["git", "commit", "pull-request", "conventional-commits"]
+    }
+  ]
+}

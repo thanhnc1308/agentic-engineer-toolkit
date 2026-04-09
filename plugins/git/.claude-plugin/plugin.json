@@ -1,0 +1,12 @@
+{
+  "name": "git",
+  "version": "1.0.1",
+  "description": "Git workflow commands (commit, PR) with shared Conventional Commits conventions",
+  "author": {
+    "name": "CThanh Nguyen"
+  },
+  "repository": "https://github.com/thanhnc1308/agentic-engineer-toolkit",
+  "license": "MIT",
+  "keywords": ["git", "commit", "pull-request", "conventional-commits"],
+  "commands": "./commands/"
+}

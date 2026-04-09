@@ -1,0 +1,71 @@
+# Agentic Engineer Toolkit
+
+An agentic engineering toolkit for full-stack software development across multiple AI coding agents. Install individual plugins per project to get context-aware skills, rules, agents, and commands.
+
+## Tech Stack
+
+- Node.js >= 22 (CommonJS)
+- ESLint 9 (flat config), markdownlint, commitlint (conventional commits)
+- No runtime framework — this is a content/tooling repo (markdown plugins + validation scripts)
+
+## Contributor Setup
+
+When working on this repo locally, symlink `.workspace/` as `.claude/` so Claude Code loads the dev environment:
+
+```sh
+./scripts/setup-claude.sh
+```
+
+Optional for Codex-based workflows:
+
+```sh
+ln -sf .workspace .codex
+```
+
+> `.workspace/` is the canonical dev environment (skills, agents, commands). It is intentionally NOT named `.claude/` in the repo to prevent the marketplace clone from leaking all skills to users who install only a single plugin.
+
+## Commands
+
+Lint: `npm run lint`
+Test (validate all components): `npm test`
+Validate single component: `node scripts/ci/validate-agents.js` (or `validate-commands`, `validate-rules`, `validate-skills`, `validate-hooks`, `validate-plugin-json`, `validate-symlinks`)
+Init new plugin: `./scripts/init-plugin.sh <plugin-name>`
+
+## Architecture
+
+Plugin marketplace structure. Each plugin lives under `plugins/<name>/` with a standardized directory layout. CI validation scripts ensure all plugins conform to required schemas.
+
+Key directories:
+
+- `plugins/`
+- `.workspace/` — Dev environment (skills, agents, commands); symlink to `.claude/` or `.codex/` locally for contributor use
+- `plugins/<name>/{agents,commands,skills,rules}` — Plugin content, frequently symlinked into `.workspace/` as the source of truth
+- `scripts/ci/` — Node.js validation scripts run in CI to enforce structure (frontmatter, required fields, SKILL.md presence, plugin.json integrity)
+- `scripts/lib/` — Shared utilities (package-manager, session-manager, utils)
+- `.claude-plugin/marketplace.json` — Plugin registry for the marketplace
+- `.github/workflows/ci.yml` — CI: validate components, lint, security scan
+
+## Code Conventions
+
+- Naming: camelCase for JS variables/functions, kebab-case for files and directories
+- Imports: CommonJS `require()` throughout (sourceType: commonjs)
+- Error handling: `process.exit(1)` on validation failure, console.error for reporting
+- File naming: `validate-<component>.js` for CI scripts, `<plugin-name>/` directories match plugin `name` in plugin.json
+- Commit messages: Conventional Commits (feat, fix, docs, refactor, etc.) enforced by commitlint, max 100 char header
+
+## Testing
+
+- Framework: Custom Node.js validation scripts (no test runner)
+- Pattern: One validator per component type in `scripts/ci/`
+- Run all: `npm test`
+- Run single: `node scripts/ci/validate-agents.js`
+
+## Patterns and Practices
+
+- Each plugin has `.claude-plugin/plugin.json` with required fields: name, version, description, license
+- Plugin name in plugin.json must match its directory name
+- Agent markdown files require frontmatter with `model` and `tools` fields
+- Each skill directory must contain a `SKILL.md` file
+- Symlinks under plugin directories must resolve to existing targets (`validate-symlinks.js` enforces this)
+- Markdown files use YAML frontmatter for metadata (name, description, model, tools)
+- CI runs 7 validators + ESLint + markdownlint on every push/PR to main
