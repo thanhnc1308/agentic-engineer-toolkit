@@ -137,4 +137,4 @@ Present the path to the user:
 
 > I've saved the requirements document to `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/<feature-name>-requirements.md`.
 >
-> Next step: Run `/tech-design` to design implementation approaches.
+> Next step: Run `/tech-design` for complex features that need a dedicated technical design. Otherwise, run `/plan` to create the implementation plan.

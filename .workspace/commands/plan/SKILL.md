@@ -1,12 +1,12 @@
 ---
-description: Create detailed implementation plan from technical design and chosen approach
+description: Create detailed implementation plan from requirements (and technical design when available)
 user-invocable: true
-argument-hint: [optional path to technical design doc]
+argument-hint: [optional path to requirements or technical design doc]
 ---
 
 # Plan — Implementation Plan
 
-You are helping a developer create a detailed, actionable implementation plan based on an approved technical design. **Do NOT start implementing.**
+You are helping a developer create a detailed, actionable implementation plan based on a confirmed requirements document, with technical design context when needed. **Do NOT start implementing.**
 
 ## Core Principles
 
@@ -19,11 +19,15 @@ You are helping a developer create a detailed, actionable implementation plan ba
 
 ## Step 1: Load Context
 
-1. If `$ARGUMENTS` provides a path, read the technical design document from that path.
-2. Otherwise, search for the most recent technical design document in `~/.agent-workspace/<PROJECT>/` directories.
-3. If no technical design document is found, ask the user for context or suggest running `/tech-design` first.
-4. Also load the corresponding requirements document from the same `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/` directory.
-5. Confirm with the user which approach from the technical design was chosen (if not already clear from the document).
+1. If `$ARGUMENTS` provides a path, read that document first. Accept either a requirements document or a technical design document.
+2. If the provided document is a technical design document, also load the corresponding requirements document from the same `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/` directory.
+3. If the provided document is a requirements document, use it directly for planning. For straightforward features, do not require a separate technical design.
+4. If no `$ARGUMENTS` path is provided, search for the most recent requirements document in `~/.agent-workspace/<PROJECT>/` directories and load it.
+5. Then search for a matching technical design document from the same feature/date directory:
+   - If found, use it as additional context.
+   - If not found, continue with requirements-only planning for straightforward features.
+6. If neither requirements nor technical design can be found, ask the user for context or suggest running `/brainstorm` first.
+7. When a technical design is present and includes multiple approaches, confirm with the user which approach was chosen (if not already clear from the document).
 
 ---
 
@@ -32,8 +36,8 @@ You are helping a developer create a detailed, actionable implementation plan ba
 Dispatch a `planner` agent with:
 
 - The requirements document
-- The technical design document
-- The user's chosen approach
+- The technical design document (when available)
+- The user's chosen approach (when technical design includes multiple options)
 - Codebase patterns and conventions from the requirements document
 
 The agent must produce a plan that includes:

@@ -35,7 +35,9 @@ Codex can use the same workspace content directly:
 
 Use [`AGENTS.md`] for Codex project instructions and [`CLAUDE.md`] for Claude Code instructions. Keep both aligned.
 
-## Enable Codex Write Access to `~/.agent-workspace`
+## Codex Configuration
+
+### Enable Write Access to `~/.agent-workspace`
 
 1. Open Codex config file:
    - `~/.codex/config.toml`
@@ -50,6 +52,27 @@ Set writable roots to include only your target path:
 ```toml
 [sandbox_workspace_write]
 writable_roots = ["/Users/<your-username>/.agent-workspace"]
+```
+
+### Persist Approval for PR Read Commands (`gh`)
+
+To avoid repeated approval prompts for PR read operations, add prefix rules to:
+
+- `~/.codex/rules/default.rules`
+
+```txt
+prefix_rule(pattern=["gh", "pr", "diff"], decision="allow")
+prefix_rule(pattern=["gh", "pr", "view"], decision="allow")
+```
+
+These rules allow read-only PR inspection commands. Write actions (for example comments/reviews via `gh`) should be approved separately.
+
+Use the helper script in this repo for temporary toggling:
+
+```bash
+./scripts/toggle-codex-gh-pr-rules.sh enable
+./scripts/toggle-codex-gh-pr-rules.sh status
+./scripts/toggle-codex-gh-pr-rules.sh disable
 ```
 
 ## Enable Claude Code Write Access to `~/.agent-workspace`
