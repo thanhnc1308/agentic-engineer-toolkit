@@ -58,13 +58,13 @@ You are helping a developer refine a feature idea into a concrete, confirmed req
 1. **Generate codebase snapshot** — Run `repomix` to create an AI-friendly codebase summary:
 
    ```bash
-   npx repomix --style markdown --output ~/.agent-workspace/<PROJECT>/repomix.md
+   npx repomix --style markdown --output ~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/repomix.md
    ```
 
    If the codebase is large, scope repomix to the relevant directories:
 
    ```bash
-   npx repomix --style markdown --include "src/relevant-dir/**" --output ~/.agent-workspace/<PROJECT>/repomix.md
+   npx repomix --style markdown --include "src/relevant-dir/**" --output ~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/repomix.md
    ```
 
 2. **Scale agent count to project size:**
@@ -119,7 +119,7 @@ If the user says "whatever you think is best", provide your recommendation and g
 
 ## Output: Requirements Document
 
-After all three phases are confirmed, save the final requirements document to `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/<feature-name>-requirements.md` (use today's date for `<YYYY-MM-DD>`) with:
+After all three phases are confirmed, save the final requirements document to `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/requirements.md` with:
 
 - Goal
 - Scope (in-scope / out-of-scope)
@@ -135,6 +135,6 @@ After all three phases are confirmed, save the final requirements document to `~
 
 Present the path to the user:
 
-> I've saved the requirements document to `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/<feature-name>-requirements.md`.
+> I've saved the requirements document to `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/requirements.md`.
 >
 > Next step: Run `/tech-design` for complex features that need a dedicated technical design. Otherwise, run `/plan` to create the implementation plan.

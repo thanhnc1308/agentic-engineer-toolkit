@@ -20,7 +20,7 @@ You are helping a developer verify that all work is genuinely complete with fres
 ## Step 1: Load Context
 
 1. If `$ARGUMENTS` provides a path, read the requirements document from that path.
-2. Otherwise, search for the most recent requirements document in `~/.agent-workspace/<PROJECT>/` directories.
+2. Otherwise, search for the most recent requirements document in `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/` directories.
 3. If no requirements document is found, ask the user what needs to be verified.
 4. Also load the corresponding plan document for the list of deliverables and files modified.
 

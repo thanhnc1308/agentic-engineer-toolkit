@@ -20,10 +20,10 @@ You are helping a developer create a detailed, actionable implementation plan ba
 ## Step 1: Load Context
 
 1. If `$ARGUMENTS` provides a path, read that document first. Accept either a requirements document or a technical design document.
-2. If the provided document is a technical design document, also load the corresponding requirements document from the same `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/` directory.
+2. If the provided document is a technical design document, also load the corresponding requirements document from the same `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/` directory.
 3. If the provided document is a requirements document, use it directly for planning. For straightforward features, do not require a separate technical design.
-4. If no `$ARGUMENTS` path is provided, search for the most recent requirements document in `~/.agent-workspace/<PROJECT>/` directories and load it.
-5. Then search for a matching technical design document from the same feature/date directory:
+4. If no `$ARGUMENTS` path is provided, search for the most recent requirements document in `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/` directories and load it.
+5. Then search for a matching technical design document from the same feature directory:
    - If found, use it as additional context.
    - If not found, continue with requirements-only planning for straightforward features.
 6. If neither requirements nor technical design can be found, ask the user for context or suggest running `/brainstorm` first.
@@ -53,9 +53,9 @@ The agent must produce a plan that includes:
 
 ## Output: Implementation Plan
 
-Save to `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/<feature-name>-plan.md` (use the same `<YYYY-MM-DD>` date as the requirements document) and present to the user:
+Save to `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/implementation-plan.md` and present to the user:
 
-> I've saved the implementation plan to `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/<feature-name>-plan.md`. Please review it.
+> I've saved the implementation plan to `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/implementation-plan.md`. Please review it.
 >
 > Does this plan look correct? (Approve to continue, or describe adjustments.)
 >

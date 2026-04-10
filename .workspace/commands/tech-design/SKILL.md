@@ -20,7 +20,7 @@ You are helping a developer choose the right architecture for a feature. Produce
 ## Step 1: Load Requirements
 
 1. If `$ARGUMENTS` provides a path, read the requirements document from that path.
-2. Otherwise, search for the most recent requirements document in `~/.agent-workspace/<PROJECT>/` directories.
+2. Otherwise, search for the most recent requirements document in `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/` directories.
 3. If no requirements document is found, ask the user for the feature requirements or suggest running `/brainstorm` first.
 
 ---
@@ -70,9 +70,9 @@ After agents return, review all approaches and compile:
 
 ## Output: Tech Design Document
 
-Save to `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/<feature-name>-tech-design.md` (use the same `<YYYY-MM-DD>` date as the requirements document loaded in Step 1) and present to the user:
+Save to `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/tech-design.md` and present to the user:
 
-> I've saved the technical design document to `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/<feature-name>-tech-design.md`. Please review the approaches and trade-offs.
+> I've saved the technical design document to `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/tech-design.md`. Please review the approaches and trade-offs.
 >
 > Which approach do you prefer? (Or describe adjustments.)
 >

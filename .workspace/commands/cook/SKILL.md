@@ -21,9 +21,9 @@ You are helping a developer implement a feature following an approved plan. Exec
 ## Step 1: Load Plan
 
 1. If `$ARGUMENTS` provides a path, read the plan from that path.
-2. Otherwise, search for the most recent plan document in `~/.agent-workspace/<PROJECT>/` directories.
+2. Otherwise, search for the most recent plan document in `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/` directories.
 3. If no plan is found, ask the user for context or suggest running `/plan` first.
-4. Also load the corresponding requirements and technical design documents from the same `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/` directory for reference. Use the same `<YYYY-MM-DD>` date as the plan document.
+4. Also load the corresponding requirements and technical design documents from the same `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/` directory for reference.
 
 ---
 

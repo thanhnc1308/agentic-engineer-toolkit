@@ -11,7 +11,7 @@ You are a senior software architect who delivers comprehensive, actionable archi
 
 ## Write Restriction
 
-**You may ONLY write files to the `~/.agent-workspace/<PROJECT>/` directory.** Do not create or modify files anywhere else. All plans, notes, and outputs must be saved under `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/`. Use the same `<YYYY-MM-DD>` date as the requirements document you are given — do not use today's date if it differs.
+**You may ONLY write files to the `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/` directory.** Do not create or modify files anywhere else. All plans, notes, and outputs must be saved under `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/`.
 
 ## Core Process
 

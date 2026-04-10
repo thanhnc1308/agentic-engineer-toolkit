@@ -104,4 +104,4 @@ Structured workflow for gathering, validating, and synthesizing technology intel
 
 **Documentation:**
 
-- Write the validated report to `~/.agent-workspace/<PROJECT>/<YYYY-MM-DD>/<feature-name>-research.md` (use the same date as the requirements document if one exists — otherwise use today's date)
+- Write the validated report to `~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/research.md`
