@@ -8,5 +8,5 @@
   "repository": "https://github.com/thanhnc1308/agentic-engineer-toolkit",
   "license": "MIT",
   "keywords": ["git", "commit", "pull-request", "conventional-commits"],
-  "commands": "./commands/"
+  "skills": "./skills/"
 }

@@ -1,5 +1,6 @@
 ---
-description: Design and propose architecture approaches with trade-off analysis
+name: tech-design
+description: Use when you need to design and propose architecture approaches with trade-off analysis.
 user-invocable: true
 argument-hint: [optional path to requirements doc]
 ---

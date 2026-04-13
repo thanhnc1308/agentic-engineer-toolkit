@@ -1,1 +1,0 @@
-../../../.workspace/commands/plan/SKILL.md

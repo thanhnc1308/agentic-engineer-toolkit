@@ -1,1 +1,0 @@
-../../../.workspace/commands/debug/SKILL.md

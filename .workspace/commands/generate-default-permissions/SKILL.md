@@ -1,5 +1,6 @@
 ---
-description: Allow Claude Code to read, grep, and glob project source while denying access to sensitive files
+name: generate-default-permissions
+description: Use when you need to allow Claude Code to read, grep, and glob project source while denying access to sensitive files
 user-invocable: true
 argument-hint: [project path]
 ---

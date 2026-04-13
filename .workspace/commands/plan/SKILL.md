@@ -1,5 +1,6 @@
 ---
-description: Create detailed implementation plan from requirements (and technical design when available)
+name: plan
+description: Use when you need to create a detailed implementation plan from requirements (and technical design when available).
 user-invocable: true
 argument-hint: [optional path to requirements or technical design doc]
 ---

@@ -1,1 +1,0 @@
-../../../.workspace/commands/use-mcp/SKILL.md

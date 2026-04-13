@@ -19,7 +19,8 @@ function validatePluginJson() {
 
   const plugins = fs
     .readdirSync(PLUGINS_DIR, { withFileTypes: true })
-    .filter((e) => e.isDirectory())
+    // Ignore hidden/system directories (e.g. plugins/.git from nested git metadata)
+    .filter((e) => e.isDirectory() && !e.name.startsWith('.'))
     .map((e) => e.name);
 
   let hasErrors = false;

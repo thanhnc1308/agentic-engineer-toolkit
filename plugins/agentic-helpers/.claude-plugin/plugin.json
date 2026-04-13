@@ -1,14 +1,13 @@
 {
   "name": "agentic-helpers",
   "version": "1.0.0",
-  "description": "Platform-specific tools, agents, and commands for cross-platform development",
+  "description": "Platform-specific tools, agents, and skills for cross-platform development",
   "author": {
     "name": "CThanh Nguyen"
   },
   "repository": "https://github.com/thanhnc1308/agentic-engineer-toolkit",
   "license": "MIT",
-  "keywords": ["platform", "cross-platform", "agents", "commands", "plugin-dev", "mcp"],
+  "keywords": ["platform", "cross-platform", "agents", "skills", "plugin-dev", "mcp"],
   "skills": "./skills/",
-  "commands": "./commands/",
   "agents": ["./agents/mcp-manager.md", "./agents/skill-reviewer.md"]
 }

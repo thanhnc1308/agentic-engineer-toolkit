@@ -1,6 +1,8 @@
 ---
-description: Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.
+name: setup-pre-commit
+description: Use when you need to set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo.
 allowed-tools: Bash(npx husky:*), Bash(npm install:*), Bash(npm run:*), Bash(npx lint-staged:*), Bash(pnpm install:*), Bash(pnpm run:*), Bash(yarn add:*), Bash(yarn run:*), Bash(bun add:*), Bash(bun run:*), Bash(cat:*), Bash(chmod:*), Read, Write, Glob
+user-invocable: true
 ---
 
 ## Context

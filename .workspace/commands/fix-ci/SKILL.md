@@ -1,7 +1,9 @@
 ---
-description: Analyze Github Actions logs and fix issues
+name: fix-ci
+description: Use when you need to analyze GitHub Actions logs and fix issues.
 argument-hint: [github-actions-url-or-run-id]
 allowed-tools: Bash(gh:*), Read, Write, Edit, Grep, Glob, Agent
+user-invocable: true
 model: sonnet
 ---
 

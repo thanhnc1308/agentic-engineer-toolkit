@@ -1,1 +1,0 @@
-../../../.workspace/commands/brainstorm/SKILL.md

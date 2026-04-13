@@ -1,7 +1,9 @@
 ---
-description: 'Review a GitHub PR with parallel specialized agents, then post comments or approve'
+name: review-pr
+description: Use when you need to review a GitHub PR with parallel specialized agents, then post comments or approve.
 argument-hint: '<pr-url>'
 allowed-tools: ['Bash', 'Glob', 'Grep', 'Read', 'Agent']
+user-invocable: true
 ---
 
 # PR Review Command

@@ -1,6 +1,7 @@
 ---
 name: code-review
 description: Review commits diverged from main/master using parallel specialized agents (code quality, security, performance, error handling). Use when completing features, before merging, or when asked to review current branch changes.
+user-invocable: true
 ---
 
 # Code Review

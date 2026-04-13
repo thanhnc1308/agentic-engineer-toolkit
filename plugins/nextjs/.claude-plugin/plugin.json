@@ -9,5 +9,5 @@
   "license": "MIT",
   "keywords": ["nextjs", "react", "frontend", "app-router"],
   "skills": "./skills/",
-  "agents": "./agents/"
+  "agents": ["./agents/nextjs-reviewer.md"]
 }

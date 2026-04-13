@@ -1,5 +1,5 @@
 ---
-description: Create a pull request
+name: git-pr
 allowed-tools: Bash(git log:*), Bash(git diff:*), Bash(git push:*), Bash(gh pr create:*), Bash(git symbolic-ref:*), Bash(git branch:*)
 arguments:
   - name: base
@@ -8,6 +8,8 @@ arguments:
   - name: head
     description: Source branch for the PR. Defaults to the current branch.
     required: false
+description: Use when you need to create a pull request.
+user-invocable: true
 ---
 
 ## Context

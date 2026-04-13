@@ -1,1 +1,0 @@
-../../../.workspace/commands/generate-default-permissions/SKILL.md

@@ -1,1 +1,0 @@
-../../../.workspace/commands/research/SKILL.md

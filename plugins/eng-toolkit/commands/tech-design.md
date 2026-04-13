@@ -1,1 +1,0 @@
-../../../.workspace/commands/tech-design/SKILL.md

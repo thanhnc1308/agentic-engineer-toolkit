@@ -1,1 +1,0 @@
-../../../.workspace/commands/git-pr/SKILL.md

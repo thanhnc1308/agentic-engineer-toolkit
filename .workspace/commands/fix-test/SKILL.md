@@ -1,7 +1,9 @@
 ---
-description: Run test flows and fix issues
+name: fix-test
+description: Use when you need to run test flows and fix issues.
 argument-hint: [test-command-or-issue-description]
 allowed-tools: Read, Write, Edit, Bash(*), Grep, Glob, Agent, AskUserQuestion
+user-invocable: true
 model: sonnet
 ---
 

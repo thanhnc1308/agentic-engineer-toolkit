@@ -1,1 +1,0 @@
-../../../.workspace/commands/review-pr/SKILL.md

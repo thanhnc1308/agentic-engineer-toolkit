@@ -1,7 +1,7 @@
 ---
 name: skill-development
 description: This skill should be used when the user wants to "create a skill", "add a new skill", "update a skill", "write skill references", "write skill scripts", "optimize a skill", or extend Claude's capabilities with new skills.
-version: 2.0.0
+user-invocable: true
 ---
 
 # Skill Creator

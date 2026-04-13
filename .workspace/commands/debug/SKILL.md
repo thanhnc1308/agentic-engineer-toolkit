@@ -1,5 +1,7 @@
 ---
-description: Debugging technical issues and providing solutions.
+name: debug
+description: Use when you need to debug technical issues and provide solutions.
+user-invocable: true
 ---
 
 **Reported Issues**:

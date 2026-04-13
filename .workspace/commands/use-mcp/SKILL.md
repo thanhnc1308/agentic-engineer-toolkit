@@ -1,5 +1,6 @@
 ---
-description: Utilize tools of Model Context Protocol (MCP) servers
+name: use-mcp
+description: Use when you need to utilize tools of Model Context Protocol (MCP) servers
 argument-hint: [task]
 user-invocable: true
 ---

@@ -1,6 +1,7 @@
 ---
 name: security-audit
 description: Use when adding authentication, handling user input, working with secrets, creating API endpoints, implementing payment/sensitive features, or before any production deployment. Provides the full security review workflow, OWASP Top 10 checklist, vulnerability patterns, report templates, and pre-deployment checklist.
+user-invocable: true
 ---
 
 # Security Audit

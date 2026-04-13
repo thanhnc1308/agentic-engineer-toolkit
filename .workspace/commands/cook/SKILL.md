@@ -1,5 +1,6 @@
 ---
-description: Implement the approved plan
+name: cook
+description: Use when you need to implement the approved plan.
 user-invocable: true
 argument-hint: [optional path to plan doc]
 ---

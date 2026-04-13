@@ -21,7 +21,6 @@
     "verification"
   ],
   "skills": "./skills/",
-  "commands": "./commands/",
   "agents": [
     "./agents/architect.md",
     "./agents/code-explorer.md",

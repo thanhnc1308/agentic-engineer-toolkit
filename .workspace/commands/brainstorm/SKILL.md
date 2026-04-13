@@ -1,5 +1,6 @@
 ---
-description: Discover requirements, explore codebase, and clarify ambiguities
+name: brainstorm
+description: Use when you need to discover requirements, explore codebase, and clarify ambiguities.
 user-invocable: true
 argument-hint: [feature description]
 ---

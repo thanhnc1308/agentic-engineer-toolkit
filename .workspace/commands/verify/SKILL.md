@@ -1,5 +1,6 @@
 ---
-description: Verify all acceptance criteria with fresh evidence before completion
+name: verify
+description: Use when you need to verify all acceptance criteria with fresh evidence before completion.
 user-invocable: true
 argument-hint: [optional path to requirements doc]
 ---

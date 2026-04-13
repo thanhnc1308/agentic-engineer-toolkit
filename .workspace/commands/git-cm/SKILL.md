@@ -1,10 +1,12 @@
 ---
-description: Stage all files and create a commit.
+name: git-cm
 allowed-tools: Bash(git add:*), Bash(git commit:*)
 arguments:
   - name: ticket
     description: JIRA ticket number (e.g., PROJ-1234). Overrides ticket extracted from branch name.
     required: false
+description: Use when you need to stage all files and create a commit.
+user-invocable: true
 ---
 
 ## Context

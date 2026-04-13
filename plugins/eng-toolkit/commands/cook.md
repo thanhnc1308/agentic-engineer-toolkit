@@ -1,1 +1,0 @@
-../../../.workspace/commands/cook/SKILL.md

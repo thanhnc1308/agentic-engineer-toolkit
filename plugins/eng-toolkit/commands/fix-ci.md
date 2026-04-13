@@ -1,1 +1,0 @@
-../../../.workspace/commands/fix-ci/SKILL.md
