@@ -59,13 +59,16 @@ You are helping a developer refine a feature idea into a concrete, confirmed req
 1. **Generate codebase snapshot** — Run `repomix` to create an AI-friendly codebase summary:
 
    ```bash
-   npx repomix --style markdown --output ~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/repomix.md
+   SERVICE_OR_REPO_NAME="${SERVICE_NAME:-$(basename "$(git rev-parse --show-toplevel)")}"
+   mkdir -p ~/.agent-workspace/repomix
+   npx repomix --style markdown --output ~/.agent-workspace/repomix/${SERVICE_OR_REPO_NAME}-repomix.md
    ```
 
    If the codebase is large, scope repomix to the relevant directories:
 
    ```bash
-   npx repomix --style markdown --include "src/relevant-dir/**" --output ~/.agent-workspace/[OPTIONAL-JIRA-TICKET]-<FEATURE_NAME>/repomix.md
+   SERVICE_OR_REPO_NAME="${SERVICE_NAME:-$(basename "$(git rev-parse --show-toplevel)")}"
+   npx repomix --style markdown --include "src/relevant-dir/**" --output ~/.agent-workspace/repomix/${SERVICE_OR_REPO_NAME}-repomix.md
    ```
 
 2. **Scale agent count to project size:**

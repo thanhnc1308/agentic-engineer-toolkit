@@ -129,11 +129,12 @@ Step 4: Check Repomix Installation
 → Bash: which repomix || npm install -g repomix
 
 Step 5: Clone and Process Repository
-→ Bash: git clone https://github.com/org/library-name /tmp/docs-analysis
-→ Bash: cd /tmp/docs-analysis && repomix --output repomix-output.xml
+→ Bash: mkdir -p ~/.agent-workspace/repomix
+→ Bash: git clone https://github.com/org/library-name ~/.agent-workspace/repomix/library-name
+→ Bash: cd ~/.agent-workspace/repomix/library-name && repomix --output ~/.agent-workspace/repomix/library-name-repomix-output.xml
 
 Step 6: Analyze Repomix Output
-→ Read: /tmp/docs-analysis/repomix-output.xml
+→ Read: ~/.agent-workspace/repomix/library-name-repomix-output.xml
 → Extract sections: README, docs/, examples/, CONTRIBUTING.md
 
 Step 7: Present Findings
@@ -359,7 +360,7 @@ Agent 3: Guides (best-practices.md, troubleshooting.md)
 
 ```
 1. First request: Clone + Repomix (slow)
-2. Save repomix-output.xml
+2. Save ~/.agent-workspace/repomix/[repo-name]-repomix-output.xml
 3. Subsequent requests: Reuse saved output (fast)
 4. Refresh only if repository updated
 ```

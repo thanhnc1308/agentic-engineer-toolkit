@@ -194,15 +194,16 @@ repomix --version
 
 ```bash
 # Basic usage
-git clone [repo-url] /tmp/docs-analysis
-cd /tmp/docs-analysis
-repomix --output repomix-output.xml
+mkdir -p ~/.agent-workspace/repomix
+git clone [repo-url] ~/.agent-workspace/repomix/[repo-name]
+cd ~/.agent-workspace/repomix/[repo-name]
+repomix --output ~/.agent-workspace/repomix/[repo-name]-repomix-output.xml
 
 # Focus on specific directory
-repomix --include "docs/**" --output docs-only.xml
+repomix --include "docs/**" --output ~/.agent-workspace/repomix/[repo-name]-docs-only.xml
 
 # Exclude large files
-repomix --exclude "*.png,*.jpg,*.pdf" --output repomix-output.xml
+repomix --exclude "*.png,*.jpg,*.pdf" --output ~/.agent-workspace/repomix/[repo-name]-repomix-output.xml
 ```
 
 **When Repomix may fail:**
@@ -217,7 +218,7 @@ repomix --exclude "*.png,*.jpg,*.pdf" --output repomix-output.xml
 
 ```bash
 # Option 1: Focus on docs directory only
-repomix --include "docs/**,README.md" --output docs.xml
+repomix --include "docs/**,README.md" --output ~/.agent-workspace/repomix/[repo-name]-docs.xml
 
 # Option 2: Use Explorer agents to read specific files
 # Launch agents to read key documentation files directly

@@ -107,11 +107,12 @@ Launch 3 Explorer agents simultaneously:
 2. Use Repomix to pack repository:
    ```bash
    npm install -g repomix  # if needed
-   git clone [repo-url] /tmp/docs-analysis
-   cd /tmp/docs-analysis
-   repomix --output repomix-output.xml
+   mkdir -p ~/.agent-workspace/repomix
+   git clone [repo-url] ~/.agent-workspace/repomix/[repo-name]
+   cd ~/.agent-workspace/repomix/[repo-name]
+   repomix --output ~/.agent-workspace/repomix/[repo-name]-repomix-output.xml
    ```
-3. Read repomix-output.xml and extract documentation
+3. Read `~/.agent-workspace/repomix/[repo-name]-repomix-output.xml` and extract documentation
 
 **Repomix benefits:**
 

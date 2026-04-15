@@ -229,8 +229,9 @@ When you find a repository, verify:
 
 ```bash
 # Clone and check size
-git clone [url] /tmp/test-repo
-du -sh /tmp/test-repo
+mkdir -p ~/.agent-workspace/repomix
+git clone [url] ~/.agent-workspace/repomix/test-repo
+du -sh ~/.agent-workspace/repomix/test-repo
 
 # If >500MB, use focused approach
 ```
@@ -238,21 +239,22 @@ du -sh /tmp/test-repo
 **2. Focus on documentation only:**
 
 ```bash
-repomix --include "docs/**,README.md,*.md" --output docs.xml
+repomix --include "docs/**,README.md,*.md" --output ~/.agent-workspace/repomix/[repo-name]-docs.xml
 ```
 
 **3. Exclude large files:**
 
 ```bash
-repomix --exclude "*.png,*.jpg,*.pdf,*.zip,dist/**,build/**,node_modules/**" --output repomix-output.xml
+repomix --exclude "*.png,*.jpg,*.pdf,*.zip,dist/**,build/**,node_modules/**" --output ~/.agent-workspace/repomix/[repo-name]-repomix-output.xml
 ```
 
 **4. Use shallow clone:**
 
 ```bash
-git clone --depth 1 [url] /tmp/docs-analysis
-cd /tmp/docs-analysis
-repomix --output repomix-output.xml
+mkdir -p ~/.agent-workspace/repomix
+git clone --depth 1 [url] ~/.agent-workspace/repomix/[repo-name]
+cd ~/.agent-workspace/repomix/[repo-name]
+repomix --output ~/.agent-workspace/repomix/[repo-name]-repomix-output.xml
 ```
 
 **5. Alternative: Explorer agents**
@@ -269,7 +271,7 @@ If Repomix fails completely:
 
 ```bash
 # Check disk space
-df -h /tmp
+df -h ~/.agent-workspace
 
 # Check available memory
 free -h
